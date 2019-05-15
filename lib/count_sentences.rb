@@ -15,6 +15,9 @@ class String
   end
 
   def count_sentences
-
+   delimiters = ['. ', "! ", "? "]
+   words = self.split(Regexp.union(delimiters))
+   counts = words.count
+   return counts
   end
 end
